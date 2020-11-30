@@ -8,8 +8,8 @@ services:
     image: 'redis:latest'
   nginx:
     depends_on:
-        - api
-        - client
+      - api
+      - client
     restart: always
     build:
       dockerfile: Dockerfile.dev
@@ -49,7 +49,7 @@ services:
   worker:
     build:
       dockerfile: Dockerfile.dev
-      context: './worker'
+      context: ./worker
     volumes:
       - /app/node_modules
       - ./worker:/app

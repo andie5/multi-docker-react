@@ -1,7 +1,7 @@
 # Base image
 FROM node:14.14.0-alpine
 # Inside the container start from this folder or working directory
-WORKDIR '/app'
+WORKDIR "/app"
 # Copy package json folder to working directory
 COPY ./package.json ./
 RUN npm install
