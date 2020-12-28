@@ -13,10 +13,10 @@ after_success:
   - docker build -t andie5/multi-container-nginx ./nginx
   - docker build -t andie5/multi-container-server ./server
   - docker build -t andie5/multi-container-worker ./worker
-# Log into the docker cli
-# - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-# # Take those images and push to docker hub
-# - docker push andie5/multi-container-client
-# - docker push andie5/multi-container-nginx
-# - docker push andie5/multi-container-server
-# - docker push andie5/multi-container-worker
+  # Log into the docker cli
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push to docker hub
+  - docker push andie5/multi-container-client
+  - docker push andie5/multi-container-nginx
+  - docker push andie5/multi-container-server
+  - docker push andie5/multi-container-worker
