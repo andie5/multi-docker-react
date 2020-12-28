@@ -1,5 +1,5 @@
 # Base image
-FROM node:14.14.0-alpine
+FROM node:14.14.0-alpine as builder
 # Inside the container start from this folder or working directory
 WORKDIR "/app"
 # Copy package json folder to working directory
